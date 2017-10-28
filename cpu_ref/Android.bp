@@ -99,7 +99,6 @@ cc_library_shared {
         "libz",
 
         "libbcinfo",
-        "libblas",
     ],
     static_libs: ["libbnnmlowp"],
     header_libs: [
@@ -125,6 +124,17 @@ cc_library_shared {
             // Not building RenderScript modules in PDK builds, as libmediandk
             // is not available in PDK.
             enabled: false,
+        },
+        carbon: {
+            target_uses_qml: {
+                cflags: ["-DUSE_QML", "-fopenmp"],
+		shared_libs: ["libQML-1.1.0"],
+		header_libs: ["libQML_headers"],
+            },
+            target_uses_eigen: {
+		shared_libs: ["libblas"],
+            },
+
         },
     },
 }
