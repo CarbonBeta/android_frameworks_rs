@@ -157,7 +157,6 @@ cc_library_shared {
         },
     },
 
-    required: ["libblasV8"],
     static_libs: ["libbnnmlowpV8"],
     shared_libs: [
         "liblog",
@@ -182,4 +181,15 @@ cc_library_shared {
         // TODO: why isn't this picked up from the host GLOBAL_CFLAGS?
         "-D__STDC_FORMAT_MACROS",
     ],
+
+     product_variables: {
+        carbon: {
+            target_uses_qsml: {
+                required: ["libQSML-0.15.2"],
+            },
+            target_uses_eigen: {
+                required: ["libblasV8"],
+            },
+        },
+    },
 }

@@ -8,7 +8,6 @@ rs-prebuilts-full: \
     libRSSupport \
     libRSSupportIO \
     libRScpp_static \
-    libblasV8 \
     libcompiler_rt \
     librsrt_arm.bc \
     librsrt_arm64.bc \
@@ -16,7 +15,9 @@ rs-prebuilts-full: \
     librsrt_x86.bc \
     librsrt_x86_64.bc \
     libLLVM_android-host64 \
-    libclang_android-host64
+    libclang_android-host64 \
+    libblasV8 \
+    libQSML-0.15.2
 
 ifneq ($(HOST_OS),darwin)
 rs-prebuilts-full: \
