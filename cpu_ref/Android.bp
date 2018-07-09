@@ -128,7 +128,7 @@ cc_library_shared {
         carbon: {
             target_uses_qsml: {
                 cflags: ["-DUSE_QSML", "-fopenmp"],
-		shared_libs: ["libQSML-0.15.2"],
+		shared_libs: ["libQSML-0.15.5"],
 		header_libs: ["libQSML_headers"],
             },
             target_uses_eigen: {

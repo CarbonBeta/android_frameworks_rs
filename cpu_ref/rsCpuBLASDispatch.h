@@ -459,7 +459,7 @@ typedef void (*FnPtr_cblas_zher2k)(const enum CBLAS_ORDER Order, const enum CBLA
 bool loadBLASLib() {
     void* handle = NULL;
 #ifdef USE_QSML
-    handle = dlopen("libQSML-0.15.2.so", RTLD_LAZY | RTLD_LOCAL);
+    handle = dlopen("libQSML-0.15.5.so", RTLD_LAZY | RTLD_LOCAL);
 #else
     handle = dlopen("libblasV8.so", RTLD_LAZY | RTLD_LOCAL);
 #endif

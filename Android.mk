@@ -17,7 +17,7 @@ rs-prebuilts-full: \
     libLLVM_android-host64 \
     libclang_android-host64 \
     libblasV8 \
-    libQSML-0.15.2
+    libQSML-0.15.5
 
 ifneq ($(HOST_OS),darwin)
 rs-prebuilts-full: \
